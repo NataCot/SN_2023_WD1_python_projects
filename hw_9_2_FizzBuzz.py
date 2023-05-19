@@ -10,3 +10,4 @@ for x in range(1, x + 1):
         print("Buzz")
     else:
         print(x)
+print("The End!")
