@@ -6,13 +6,13 @@ secret = random.randint(1, 25)
 
 attempts = 0
 
-with open("best_score.txt", "r") as best_score_file:
+with open("best_score.txt") as best_score_file:
     total = best_score_file.read()
     num1, num2, num3 = total.split()
     num1 = int(num1)
     num2 = int(num2)
     num3 = int(num3)
-    print("Top best scores are: " + str(total))
+    print("The first three best scores are: " + str(total))
 
 while True:
     guess = input("Enter a number in range from 1 to 25: ")
