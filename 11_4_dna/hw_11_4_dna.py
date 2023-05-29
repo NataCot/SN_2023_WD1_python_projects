@@ -9,8 +9,9 @@ def function1(characteristic):
 
 
 def function2(person):
-    if list(person.values()) == suspect:
-        print(person)
+    if sorted(list(person.values())) == sorted(suspect):
+        suspect_name = [k for k, v in people.items() if v == person]
+        print("The suspect(s) are: " + str(suspect_name))
 
 
 hair = {
@@ -40,37 +41,35 @@ race = {
     "asian": "CGCGGGCCG"
 }
 
-eva = {
-    "gender": "female",
-    "race": "white",
-    "hair": "blonde",
-    "eyes": "blue",
-    "face": "oval"
-}
-
-larisa = {
-    "gender": "female",
-    "race": "white",
-    "hair": "brown",
-    "eyes": "brown",
-    "face": "oval"
-}
-
-matej = {
-    "gender": "male",
-    "race": "white",
-    "hair": "brown",
-    "eyes": "brown",
-    "face": "oval"
-}
-
-miha = {
-    "gender": "male",
-    "race": "white",
-    "hair": "brown",
-    "eyes": "green",
-    "face": "square"
-}
+people = {
+    "eva": {
+        "gender": "female",
+        "race": "white",
+        "hair": "blonde",
+        "eyes": "blue",
+        "face": "oval"
+    },
+    "larisa": {
+        "gender": "female",
+        "race": "white",
+        "hair": "brown",
+        "eyes": "brown",
+        "face": "oval"
+    },
+    "matej": {
+        "gender": "male",
+        "race": "white",
+        "hair": "brown",
+        "eyes": "brown",
+        "face": "oval"
+    },
+    "miha": {
+        "gender": "male",
+        "race": "white",
+        "hair": "brown",
+        "eyes": "green",
+        "face": "square"
+    }}
 
 suspect = []
 
@@ -80,10 +79,9 @@ function1(eyes)
 function1(gender)
 function1(race)
 
-# suspect.sort()
-print(suspect)
+print("The characteristics of the suspect are: " + str(suspect))
 
-function2(eva)
-function2(larisa)
-function2(matej)
-function2(miha)
+function2(people["eva"])
+function2(people["larisa"])
+function2(people["matej"])
+function2(people["miha"])
