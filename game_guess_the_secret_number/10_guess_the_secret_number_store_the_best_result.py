@@ -20,7 +20,7 @@ while True:
     try:
         guess = float(guess)
     except ValueError:
-        print("Only numbers are allowed. Please try again.")
+        print("Only numbers allowed. Please try again.")
     else:
         if guess < 1 or guess > 25:
             print("Only the numbers between 1 and 25 are allowed. Please try again.")
