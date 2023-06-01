@@ -1,11 +1,5 @@
 import random
 
-
-def number_of_countries():
-    x = len(countries_cities)
-    return x
-
-
 countries_cities = {
     "Austria": "Vienna",
     "Belgium": "Brussels",
@@ -53,4 +47,3 @@ while len(countries_cities) != 0:
 
 result = format(correct_result/attempts, ".2f")
 print("You answered correctly " + str(result) + "% of the answers")
-
